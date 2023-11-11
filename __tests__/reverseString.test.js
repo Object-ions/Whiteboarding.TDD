@@ -1,4 +1,4 @@
-import { reverseString } from '../src/js/reverseString-1.js';
+import { reverseString } from '../src/js/reverseString.js';
 
 describe('reverse string', () => {
   it('should be existed', () => {
