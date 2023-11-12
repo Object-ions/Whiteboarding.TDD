@@ -26,8 +26,27 @@
 
 // refactoring :
 
-export const palindrome = function (string) {
-  const reversed = string.split('').reverse().join('');
+// export const palindrome = function (string) {
+//   const reversed = string.split('').reverse().join('');
   
-  return string === reversed;
+//   return string === reversed;
+// };
+
+
+// ************* //
+
+// Solution 2:
+// 1. taking a string and turn into an array .split()
+// 2. using .every() on it to *boolian check* every element in the array
+//  export. [0, 10, 14] - is every single element is greater than 5?
+//  arr.every((val) => val > 5);
+
+// input ex : ['a', 'b', 'c', 'b', 'a']
+
+export const palindrome = function (string) {
+  return string.split('').every((char, index) => {
+    return char === string[string.length - index - 1]; // -1 bc the array is 0 indexed
+  })
 };
+
+// many ways to solve a problem - I think this is a good solution, although its doing double the comperesion that it needs to do.
