@@ -43,10 +43,15 @@
 
 // input ex : ['a', 'b', 'c', 'b', 'a']
 
-export const palindrome = function (string) {
-  return string.split('').every((char, index) => {
-    return char === string[string.length - index - 1]; // -1 bc the array is 0 indexed
-  })
-};
+// export const palindrome = function (string) {
+//   return string.split('').every((char, index) => {
+//     return char === string[string.length - index - 1]; // -1 bc the array is 0 indexed
+//   })
+// };
+
+
+// Refactoring:
+
+export const palindrome = (str) => str.split('').every((char, index) => char === str[str.length - index - 1]);
 
 // many ways to solve a problem - I think this is a good solution, although its doing double the comperesion that it needs to do.
