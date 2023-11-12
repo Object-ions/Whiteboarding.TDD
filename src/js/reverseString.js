@@ -31,10 +31,14 @@
 
 // Solution 3:
 // 1. turn into an array, using .split()
-// 2. using .reduce() that take all the different values in the array and condence them all down into a single value
+// 2. using .reduce() that take all the different values in the array
+//    and condence them all down into a single value
 
-export const reverseString = (str) => {
-  return str.split('').reduce((reversed, char) => {
-    return char + reversed;
-  }, '');
-};
+// export const reverseString = (str) => {
+//   return str.split('').reduce((reversed, char) => {
+//     return char + reversed;
+//   }, '');
+// };
+
+// refactoring:
+export const reverseString = (str) => str.split('').reduce((rev, char) => char + rev, '');
