@@ -32,7 +32,7 @@
 // Solution 3:
 // 1. turn into an array, using .split()
 // 2. using .reduce() that take all the different values in the array
-//    and condence them all down into a single value
+//    and condence them all down into a single value (from array to a single string)
 
 // export const reverseString = (str) => {
 //   return str.split('').reduce((reversed, char) => {
