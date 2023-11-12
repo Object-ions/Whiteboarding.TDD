@@ -15,17 +15,29 @@
 // Math.sign(x) -> check if number is positive or negative
 
 
-export const reverseInt = function reverseInt(num) {
+// export const reverseInt = function reverseInt(num) {
   
-  if (num === 0){
-    return 0;
-  } else if (num > 0) {
-    let output = num.toString().split('').reverse().join('');
-    return +output;
-  } else {
-    let output = num.toString().split('').reverse().join('');
-    let newOutput = parseInt(output);
-    return newOutput * -1;
-  }
-};
+//   if (num === 0){
+//     return 0;
+//   } else if (num > 0) {
+//     let output = num.toString().split('').reverse().join('');
+//     return +output;
+//   } else {
+//     let output = num.toString().split('').reverse().join('');
+//     let newOutput = parseInt(output);
+//     return newOutput * -1;
+//   }
+// };
 
+// *********** //
+
+// Solution 2:
+
+export const reverseInt = function reverseInt(number) {
+  const reversed = number.toString().split('').reverse().join('');
+  
+  if (number < 0) {
+    return parseInt(reversed) * -1;
+  }
+  return parseInt(reversed);
+};
