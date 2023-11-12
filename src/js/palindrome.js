@@ -8,11 +8,26 @@
 //   palindrome("abcdefg") === false
 
 // Solution 1:
+
+// 1. break the string to an array
+// 2. reverse the string that was pass to us
+// 3. join it back to a string
+// 4. check logical equality
+
+// export const palindrome = function (string) {
+//   const reversed = string.split('').reverse().join('');
+//   if (reversed === string) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
+
+
+// refactoring :
+
 export const palindrome = function (string) {
-  let newStr = string.split('').reverse().join('');
-  if (newStr === string) {
-    return true;
-  } else {
-    return false;
-  }
+  const reversed = string.split('').reverse().join('');
+  
+  return string === reversed;
 };
