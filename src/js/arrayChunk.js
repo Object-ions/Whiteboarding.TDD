@@ -29,11 +29,26 @@
 
 
 // Solution 2:
+
+// function arrayChunk(array, size) {
+//   const chunked = [];
+
+//   for (let i = 0; i < array.length; i += size) {
+//     chunked.push(array.slice(i, i + size));
+//   }
+
+//   return chunked;
+// }
+
+
+// Solution 3:
 function arrayChunk(array, size) {
   const chunked = [];
+  let index = 0;
 
-  for (let i = 0; i < array.length; i += size) {
-    chunked.push(array.slice(i, i + size));
+  while (index < array.lenght){
+    chunked.push(array.slice(index, index + size));
+    index = index + size;
   }
 
   return chunked;
