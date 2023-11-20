@@ -35,22 +35,27 @@
 // ***** Solution 2 ***** //
 // ********************** //
 
-// 1. Create 'result' whcich is the first char of the input is capitalize
+// 1. Create an empty string called 'result'
 // 2. For each char in the string
-//      if the char to the left a space
+//      if the character (of the current one) to the left a space
+//      if it is a space we will take the current letter (character) and capitalize it 
 //      capitalize and add to result
-//      else add it to result
+//      else add it to result as is no capitalized
 
-function capitalize(str) {
-  let result = str[0].toUpperCase();
+// so the indicator 'when' we need to capitalize is white space to the left.
 
-  for (let i = 1; i < str.length; i++) {
-    if (str[i -1] === ' ') {
-      result += str[i].toUpperCase();
+function capitalize(string) {
+  let result = string[0].toUpperCase();
+  // Hi There How Is It Going
+  for (let i = 1; i < string.length; i++) {
+
+    if (string[i - 1] === ' ') {
+      result += string[i].toUpperCase();
     } else {
-      result += str[i]
+      result += string[i];
     }
   }
+
   return result;
 }
 
