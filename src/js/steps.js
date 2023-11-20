@@ -35,14 +35,31 @@
 
 // ***** Solution 1 ***** //
 
+// function steps(n) {
+//   for (let i = 1; i <= n; i++) {
+//     let result = '#'.repeat(i);
+//     let spaces = ' '.repeat(n - i); 
+//     console.log(result + spaces);
+//   }
+// }
+
+// ***** Solution 2 ***** //
+
 function steps(n) {
-  for (let i = 1; i <= n; i++) {
-    let result = '#'.repeat(i);
-    let spaces = ' '.repeat(n - i); 
-    console.log(result + spaces);
+  for (let row = 0; row < n; row ++) {
+    let step = '';
+
+    for (let col = 0; col < n; col++) {
+      if (col <= row) {
+        step += '#';
+      } else {
+        step += ' ';
+      }
+    }
+
+    console.log(step);
   }
 }
-
 
 
 module.exports = steps;
