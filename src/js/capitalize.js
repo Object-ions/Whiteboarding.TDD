@@ -30,6 +30,12 @@
 //   return words.join(' ');
 // }
 
+// refactoring
+
+function capitalize (string) {
+  return string.split(' ').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+}
+
 
 // ********************** //
 // ***** Solution 2 ***** //
@@ -44,19 +50,19 @@
 
 // so the indicator 'when' we need to capitalize is white space to the left.
 
-function capitalize(string) {
-  let result = string[0].toUpperCase();
-  // Hi There How Is It Going
-  for (let i = 1; i < string.length; i++) {
+// function capitalize(string) {
+//   let result = string[0].toUpperCase();
 
-    if (string[i - 1] === ' ') {
-      result += string[i].toUpperCase();
-    } else {
-      result += string[i];
-    }
-  }
+//   for (let i = 1; i < string.length; i++) {
 
-  return result;
-}
+//     if (string[i - 1] === ' ') {
+//       result += string[i].toUpperCase();
+//     } else {
+//       result += string[i];
+//     }
+//   }
+
+//   return result;
+// }
 
 module.exports = capitalize;
