@@ -65,7 +65,7 @@
 // ***** Solution 3 ***** //
 //       Recursion       //
 function steps(n) {
-  
+  return n;
 }
 
 
